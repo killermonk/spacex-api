@@ -1,7 +1,7 @@
 # Space X Launches
 
 ![react](https://badgen.net/badge/React/18.2.0/purple?icon=git)
-![bootstrap](https://badgen.net/badge/ReactBootstrap/2.5.0/blue?icon=git)
+![bootstrap](https://badgen.net/badge/React-Bootstrap/2.5.0/blue?icon=git)
 ![axios](https://badgen.net/badge/Axios/0.27.2/yellow?icon=git)
 
 ### Display scheduled launches associated with SpaceX. This app maps through launches from the open API and displays them in a Bootstrap grid with additional information on each launch.
