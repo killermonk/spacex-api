@@ -35,7 +35,7 @@ function App() {
 
   return (
     <div>
-      <h1>Upcoming Launches</h1>
+      <h2>Upcoming Space X Launches</h2>
       <Launch getData={getData} fetching={fetching} />
       <Launches error={error} key={key} launches={launches} />
     </div>

@@ -22,9 +22,9 @@ const Launches = props => {
             (
                 <div className="p-4 border rounded m-4" key={props.key}>
                     <Row className="p-4">
-                        <Col>
+                        <Col className="col-4">
                             <h2>{launch.name}</h2><br/>
-                            <img src={launch.links.patch.small} />
+                            <img src={launch.links.patch.small} className="img-thumbnail" />
                         </Col>
                         <Col>
                         <dl>
