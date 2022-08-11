@@ -12,12 +12,12 @@ function App() {
   const getData = () => {
     setFetching(true);
     axios
-      .get("https://api.spacexdata.com/v5/launches")
+      .get("https://api.spacexdata.com/v4/launches")
       .then((response) => {
         console.log("response: ", response.data);
         setLaunches(response.data);
         setKey(response.data.id);
-        console.log("key: ", response.data.id);
+        // console.log("key: ", response.data.id);
         setFetching(false);
       })
       .catch((error) => {

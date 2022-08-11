@@ -1,12 +1,12 @@
 # Space X Launches
 
 ![react](https://badgen.net/badge/React/18.2.0/purple?icon=git)
+![bootstrap](https://badgen.net/badge/React Bootstrap/2.5.0/blue?icon=git)
 ![axios](https://badgen.net/badge/Axios/0.27.2/yellow?icon=git)
-![express](https://badgen.net/badge/Bootstrap/2.5.0/blue?icon=git)
 
-Display scheduled launches associated with SpaceX. This app maps through launches from the open API and displays them in a Bootstrap grid with additional information on each launch.
+### Display scheduled launches associated with SpaceX. This app maps through launches from the open API and displays them in a Bootstrap grid with additional information on each launch.
 
-My first step was to install React framework, initialize a Git and install dependencies i think i may need: Axios and Bootstrap. I run the Space X open API through Insomnia to easily view what data i would get as a response. I proceeded to code Axios to connect to the API and set responses and error to state values. UseEffect runs the function and loads data on DOM load & component refresh. I send the response data through to the launch list and launch components. I'm having some trouble passing the ID through as a key to the correct element - will come back later. A ternary condition shows a refresh button unless launches are loading. I created a map to cut through the data and group them into individual launches. Using bootstrap grid i've built each launch into rows and columns, so far everything seems to be responsive.
+My first step was to install React framework, initialize a Git and install dependencies i think i may need: Axios and Bootstrap. I run the Space X open API through Insomnia to easily view what data i would get as a response. I proceeded to code Axios to connect to the API and set responses and error to state values. UseEffect runs the function and loads data on DOM load & component refresh. I send the response data through to the launch list and launch components. I'm having some trouble passing the ID through as a key to the correct element - will come back later. A ternary condition shows a refresh button unless launches are loading. I created a map to cut through the data and group them into individual launches. Using bootstrap grid i've built each launch into rows and columns, so far everything seems to be responsive. Added a second API call to get the rocket data, response was an infinite loop - thinking - it may work sending the props through a rocket component.
 
 ## Installation
 
