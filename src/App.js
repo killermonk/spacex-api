@@ -6,7 +6,6 @@ import Launch from "./components/Launch";
 function App() {
   const [error, setError] = useState("");
   const [launches, setLaunches] = useState([]);
-  const [key, setKey] = useState("");
   const [fetching, setFetching] = useState(false);
 
   const getData = () => {
@@ -15,7 +14,6 @@ function App() {
       .get("https://api.spacexdata.com/v4/launches")
       .then((response) => {
         setLaunches(response.data);
-        setKey(response.data.id);
         setFetching(false);
       })
       .catch((error) => {
@@ -25,9 +23,7 @@ function App() {
   };
 
   useEffect(() => {
-    {
-      getData();
-    }
+    getData();
   }, []);
 
   return (
@@ -39,7 +35,7 @@ function App() {
         </span>
       </nav>
       <div className="p-5"></div>
-      <Launches error={error} key={key} launches={launches} />
+      <Launches error={error} fetching={fetching} launches={launches} />
     </div>
   );
 }
