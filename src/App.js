@@ -14,14 +14,11 @@ function App() {
     axios
       .get("https://api.spacexdata.com/v4/launches")
       .then((response) => {
-        console.log("response: ", response.data);
         setLaunches(response.data);
         setKey(response.data.id);
-        // console.log("key: ", response.data.id);
         setFetching(false);
       })
       .catch((error) => {
-        console.log("Error: ", error);
         setError(error);
         setFetching(false);
       });
@@ -35,8 +32,13 @@ function App() {
 
   return (
     <div>
-      <h2>Upcoming Space X Launches</h2>
-      <Launch getData={getData} fetching={fetching} />
+      <nav className="navbar navbar-light bg-light fixed-top">
+        <span className="navbar-brand mb-0 h1">SpaceX Launches</span>
+        <span className="float-right">
+          <Launch getData={getData} fetching={fetching} />
+        </span>
+      </nav>
+      <div className="p-5"></div>
       <Launches error={error} key={key} launches={launches} />
     </div>
   );

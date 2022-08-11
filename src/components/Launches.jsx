@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Row from "react-bootstrap/row";
-import Col from "react-bootstrap/col";
 
 const Launches = props => {
 
@@ -36,13 +34,15 @@ const Launches = props => {
       ) : (
         props.launches.map(launch =>
             (
-                <div className="p-4 border rounded m-4" key={props.key}>
-                    <Row className="p-4">
-                        <Col className="col-5">
-                            <h2>{launch.name}</h2><br/>
-                            <img src={launch.links.patch.small} style={{maxHeight: "100px"}} />
-                        </Col>
-                        <Col className="col-7">
+                <div className="p-5 border rounded m-4 bg-light" key={props.key}>
+                        <div className="d-flex justify-content-center">
+                            <h2 className="">{launch.name}</h2>
+                        </div>
+                        <div className="d-flex justify-content-center">
+                            <img className="" src={launch.links.patch.small} style={{maxHeight: "150px"}} />
+                        </div>
+
+                        <div className="pt-4">
                         <dl>
                             <dt>Date</dt>
                             <dd>{splitDate(launch.date_utc)}</dd>
@@ -69,8 +69,7 @@ const Launches = props => {
                             {/* <dd>{getRocket(launch.rocket)}</dd>
                             infinite loop */}
                         </dl>
-                        </Col>
-                    </Row>
+                        </div>
                 </div>
             ))
       )
